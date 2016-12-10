@@ -1,0 +1,24 @@
+<?php
+session_start();
+if (isset($_SESSION['zalogowany_user'])){
+	header('Location: http://serwer1686836.home.pl/kucharski/z7/panel_user.php');
+}
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<BODY>
+<a href="./rejestracja.php"><input type="button" value="Rejestracja" /></a><br><br>
+Formularz logowania
+<form method="post" action="weryfikuj.php">
+Login:<input type="text" name="user" maxlength="20" size="20"><br>
+Haslo:<input type="password" name="pass" maxlength="20" size="20"><br>
+<input type="submit" value="Zaloguj"/>
+
+<br>
+
+
+</form>
+</BODY>
+</HTML>
